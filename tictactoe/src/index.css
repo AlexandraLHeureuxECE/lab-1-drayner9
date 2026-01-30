@@ -1,0 +1,17 @@
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #0b1020; /* full-screen background */
+}
+
+#root {
+  height: 100%;
+}

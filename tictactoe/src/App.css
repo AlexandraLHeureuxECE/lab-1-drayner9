@@ -1,0 +1,96 @@
+/* Full screen background + center content */
+.page {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center; /* centers horizontally + vertically */
+  color: white;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Game container (centered block) */
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Top area */
+.title {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.4px;
+}
+
+.statusRow {
+  width: 360px; /* match board width */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Fixed size board */
+.board {
+  width: 360px;
+  height: 360px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Fixed size cells (never change) */
+.cell {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell--win {
+  border: 2px solid rgba(0, 255, 170, 0.65);
+  background: rgba(0, 255, 170, 0.12);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 12px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn--primary {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: 700;
+}
+
+.hint {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 13px;
+  text-align: center;
+  max-width: 360px;
+}
+.cell:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.55);
+  outline-offset: 2px;
+}
