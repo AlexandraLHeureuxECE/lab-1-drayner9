@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Tic-Tac-Toe (React + Vite + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, web-based **Tic-Tac-Toe** game built with **React**, **TypeScript**, and **Vite**.  
+The game supports **two players on the same device**, provides **keyboard-only gameplay**, and can be restarted at any time without refreshing the page.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:**  
+https://alexandralheureuxece.github.io/lab-1-drayner9/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interactive **3×3 Tic-Tac-Toe grid**
+- Two-player gameplay (X and O)
+- Turn-based logic with clear status messages
+- Win and draw detection
+- **Restart game at any time**
+- **Keyboard accessibility (no mouse required)**
+- Fully client-side, no backend required
+- Deployed using **GitHub Pages**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Keyboard Controls
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The game can be played entirely using the keyboard:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Key | Action |
+|----|-------|
+| Arrow Keys | Move between cells |
+| Enter / Space | Place a mark |
+| **R** | Restart the game |
+| 1–9 | (Optional) Select a cell directly |
+| Enter / Space (on Play Again) | Restart after game over |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+When the game ends:
+- Focus is locked on the **Play Again** button
+- The grid is disabled
+- Focus cannot move until the game is restarted
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React**
+- **TypeScript**
+- **Vite**
+- **CSS**
+- **GitHub Pages** (deployment)
+
+---
+
+## Project Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/AlexandraLHeureuxECE/lab-1-drayner9.git
+cd lab-1-drayner9
